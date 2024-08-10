@@ -182,6 +182,7 @@ app.get('/search', async (req, res) => {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Resultados da Busca</title>
+        <script src="favorito.js"></script>
         <link rel="stylesheet" href="/estilos.css">
     </head>
     <body>
@@ -197,6 +198,7 @@ app.get('/search', async (req, res) => {
                     <p>Preço: R$ ${product.preçotexto}</p>
                     <p>Melhor Vendedor: ${product.barato || 'Não disponível'}</p>
                     <p>Parcelamento: ${product.parcelamento || 'sem parcelamento'}</p>
+                     <button class="favorito-bt" data-id="${product.nome}">Adicionar aos Favoritos</button>
             </div>
             `).join('')}
         </div>
@@ -219,5 +221,5 @@ app.get('/search', async (req, res) => {
 
 const port = 3000;
 app.listen(port, () => {
-    console.log(`Server rodando em http://localhost:${port}`);
+    console.log(` http://localhost:${port}`);
 });
