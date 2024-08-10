@@ -1,7 +1,7 @@
 <?php
 include 'db/connection.php';
 
-$userId = $_SESSION['user_id'];  // Assumindo que você usa sessões
+$userId = $_SESSION['user_id'];  
 $query = "SELECT * FROM favoritos WHERE user_id = ?";
 $stmt = $conn->prepare($query);
 $stmt->bind_param("i", $userId);
