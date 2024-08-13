@@ -10,7 +10,7 @@ $usuarioLogado = isset($_SESSION['usuario']) ? $_SESSION['usuario'] : null;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>site de buscar</title>
+    <title>T.IBusca</title>
    
        
     <link rel="Icon" type="imagem/x-icon" href="https://i.ibb.co/MNXz0ST/Logo-Branca.png">
@@ -135,7 +135,7 @@ $usuarioLogado = isset($_SESSION['usuario']) ? $_SESSION['usuario'] : null;
         <ul>
             <li id="botao-login">
                 <?php if (isset($_SESSION['usuario'])): ?>
-                    <a href="PerfilUsuario.html"><span>Bem-vindo, <?php echo htmlspecialchars($_SESSION['usuario']); ?></span></a>
+                    <a href="PerfilUsuario.php"><span>Bem-vindo, <?php echo htmlspecialchars($_SESSION['usuario']); ?></span></a>
                 <?php else: ?>
                   <img id="imgLogin" src="https://i.ibb.co/XWmbxmS/Avatar-1.png" alt="Avatar-1" border="0">
                     <a href="login.php">Entrar</a>
@@ -315,8 +315,11 @@ $usuarioLogado = isset($_SESSION['usuario']) ? $_SESSION['usuario'] : null;
   <h2 class="vitrine"> computadores </h2>
   <section class="products">
     <button class="pre-btn"><img src="https://i.ibb.co/H4MPKtS/Seta-Esquerda.png" alt="Seta-Esquerda" border="0"></button>
-  <ul class="product-list">
-    <li class="product-item">
+    <button class="nxt-btn"><img src="https://i.ibb.co/7pZKPP9/Seta-Direita.png" alt="Seta-Direita" border="0"></button>
+      <ul class="product-list">
+        <div class="product-container">
+          <div class="product-card">
+            <li class="product-item">
       <a href="http://localhost:3000/search?q=&searchTerm=pc+game+tmoba&categoria=todas" target="_blank" class="product-link">
         <figure class="product-info">
           <div class="product-info-img">
@@ -354,8 +357,10 @@ $usuarioLogado = isset($_SESSION['usuario']) ? $_SESSION['usuario'] : null;
           </div>
         </figure>
       </a>
-    </li>
-    <li class="product-item">
+            </li>
+          </div>
+          <div class="product-card">
+            <li class="product-item">
       <a href="http://localhost:3000/search?q=&searchTerm=computador+game&categoria=todas" target="_blank" class="product-link">
         <figure class="product-info">
           <div class="product-info-img">
@@ -377,7 +382,7 @@ $usuarioLogado = isset($_SESSION['usuario']) ? $_SESSION['usuario'] : null;
               <li><img src="https://i.ibb.co/TwYYb93/star-1.png">
               </li>
               <li class="qtd-votes">
-                </span>(200)</span>
+                </span>(82)</span>
               </li>
             </ul>
           </figcaption>
@@ -394,8 +399,10 @@ $usuarioLogado = isset($_SESSION['usuario']) ? $_SESSION['usuario'] : null;
           </div>
         </figure>
       </a>
-    </li>
-    <li class="product-item">
+            </li>
+          </div>
+          <div class="product-card">
+            <li class="product-item">
       <a href="http://localhost:3000/search?q=&searchTerm=notebook+game+ace&categoria=todas" target="_blank" class="product-link">
         <figure class="product-info">
           <div class="product-info-img">
@@ -411,12 +418,12 @@ $usuarioLogado = isset($_SESSION['usuario']) ? $_SESSION['usuario'] : null;
               </li>
               <li><img src="https://i.ibb.co/2kW5mnM/star.png">
               </li>
-              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+              <li><img src="https://i.ibb.co/rGmv1GN/Meia-Estrela.png">
               </li>
               <li><img src="https://i.ibb.co/TwYYb93/star-1.png">
               </li>
               <li class="qtd-votes">
-                </span>(200)</span>
+                </span>(54)</span>
               </li>
             </ul>
           </figcaption>
@@ -433,8 +440,10 @@ $usuarioLogado = isset($_SESSION['usuario']) ? $_SESSION['usuario'] : null;
           </div>
         </figure>
       </a>
-    </li>
-    <li class="product-item">
+            </li>
+          </div>
+          <div class="product-card">
+            <li class="product-item">
       <a href="http://localhost:3000/search?q=&searchTerm=notebook+game+ace+nitro+5&categoria=todas" target="_blank" class="product-link">
         <figure class="product-info">
           <div class="product-info-img">
@@ -452,10 +461,10 @@ $usuarioLogado = isset($_SESSION['usuario']) ? $_SESSION['usuario'] : null;
               </li>
               <li><img src="https://i.ibb.co/2kW5mnM/star.png">
               </li>
-              <li><img src="https://i.ibb.co/TwYYb93/star-1.png">
+              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
               </li>
               <li class="qtd-votes">
-                </span>(200)</span>
+                </span>(154)</span>
               </li>
             </ul>
           </figcaption>
@@ -472,16 +481,145 @@ $usuarioLogado = isset($_SESSION['usuario']) ? $_SESSION['usuario'] : null;
         </figure>
         
       </a>
-    </li>
-
-    
-  </ul>
+            </li>
+          </div>
+          <div class="product-card">
+            <li class="product-item">
+      <a href="http://localhost:3000/search?q=&searchTerm=notebook+game+ace+nitro+5&categoria=todas" target="_blank" class="product-link">
+        <figure class="product-info">
+          <div class="product-info-img">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_824950-MLB49471763307_032022-O.webp" alt="description image" style="width: 70%;">
+          </div>
+          <figcaption class="product-info-description">
+            <h2 class="title">Computador Intel I7 16gb</h2>
+            <p class="description"> Processador Intel i7, 16Gb DDR3, 480Gb SSD, Fonte Bivolt Manual, Placa de vídeo onboard Intel HD Graphics</p>
+            <ul class="star-ranking">
+              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+              </li>
+              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+              </li>
+              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+              </li>
+              <li><img src="https://i.ibb.co/TwYYb93/star-1.png">
+              </li>
+              <li><img src="https://i.ibb.co/TwYYb93/star-1.png">
+              </li>
+              <li class="qtd-votes">
+                </span>(57)</span>
+              </li>
+            </ul>
+          </figcaption>
+          <div class="price-box">
+            <div class="price">
+              <div>
+                <del>R$1.674,99</del>
+                <ins>Ver completo</ins>
+              </div>
+              <span class="price-info">Ver completo </span>
+            </div>
+            <div><button href="#" class="btn btn-buy">comparar <i class="fas fa-arrow-right"></i></button></div>
+          </div>
+        </figure>
+        
+      </a>
+            </li>
+          </div>
+          <div class="product-card">
+            <li class="product-item">
+      <a href="http://localhost:3000/search?q=&searchTerm=notebook+game+ace+nitro+5&categoria=todas" target="_blank" class="product-link">
+        <figure class="product-info">
+          <div class="product-info-img">
+            <img src="https://images.kabum.com.br/produtos/fotos/sync_mirakl/427773/Computador-Completo-3green-3D-099-Intel-Core-i7-16GB-RAM-512GB-SSD-Monitor-LED-19-5-Windows-10_1721325105_gg.jpg" alt="description image">
+          </div>
+          <figcaption class="product-info-description">
+            <h2 class="title">Computador Completo 3green 3D-099</h2>
+            <p class="description">Intel Core i7, 16GB RAM, 512GB SSD, Monitor LED 19.5"</p>
+            <ul class="star-ranking">
+              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+              </li>
+              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+              </li>
+              <li><img src="https://i.ibb.co/rGmv1GN/Meia-Estrela.png">
+              </li>
+              <li><img src="https://i.ibb.co/TwYYb93/star-1.png">
+              </li>
+              <li><img src="https://i.ibb.co/TwYYb93/star-1.png">
+              </li>
+              <li class="qtd-votes">
+                </span>(23)</span>
+              </li>
+            </ul>
+          </figcaption>
+          <div class="price-box">
+            <div class="price">
+              <div>
+                <del>R$1.829,99</del>
+                <ins>Ver completo</ins>
+              </div>
+              <span class="price-info">Ver completo </span>
+            </div>
+            <div><button href="#" class="btn btn-buy">comparar <i class="fas fa-arrow-right"></i></button></div>
+          </div>
+        </figure>
+        
+      </a>
+            </li>
+          </div>
+          <div class="product-card">
+            <li class="product-item">
+      <a href="http://localhost:3000/search?q=&searchTerm=notebook+game+ace+nitro+5&categoria=todas" target="_blank" class="product-link">
+        <figure class="product-info">
+          <div class="product-info-img">
+            <img src="https://images.kabum.com.br/produtos/fotos/576020/notebook-lenovo-v15-g3-intel-core-i5-1235u-8gb-ram-ssd-256gb-15-6-full-hd-intel-iris-xe-graphics-windows-11-pro-preto-82um0007br_1716898385_gg.jpg" alt="description image">
+          </div>
+          <figcaption class="product-info-description">
+            <h2 class="title">Notebook Lenovo V15 G3</h2>
+            <p class="description">Intel Core i5-1235U, 8GB RAM, SSD 256GB, 15,6" Full HD</p>
+            <ul class="star-ranking">
+              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+              </li>
+              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+              </li>
+              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+              </li>
+              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+              </li>
+              <li><img src="https://i.ibb.co/rGmv1GN/Meia-Estrela.png">
+              </li>
+              <li class="qtd-votes">
+                </span>(5)</span>
+              </li>
+            </ul>
+          </figcaption>
+          <div class="price-box">
+            <div class="price">
+              <div>
+                <del>R$3.299,99</del>
+                <ins>Ver completo</ins>
+              </div>
+              <span class="price-info">Ver completo </span>
+            </div>
+            <div><button href="#" class="btn btn-buy">comparar <i class="fas fa-arrow-right"></i></button></div>
+          </div>
+        </figure>
+        
+      </a>
+            </li>
+          </div>
+        </div>
+      </ul>
   </section>
+
   
   <!-- segunda vitrine -->
   <h2 class="vitrine">Memórias</h2>
-  <ul class="product-list">
-    <li class="product-item">
+  <section class="products">
+    <button class="pre-btn"><img src="https://i.ibb.co/H4MPKtS/Seta-Esquerda.png" alt="Seta-Esquerda" border="0"></button>
+    <button class="nxt-btn"><img src="https://i.ibb.co/7pZKPP9/Seta-Direita.png" alt="Seta-Direita" border="0"></button>
+    <ul class="product-list">
+      <div class="product-container">
+        <div class="product-card">
+          <li class="product-item">
       <a href="http://localhost:3000/search?q=&searchTerm=Mem%C3%B3ria+Kingston+Fury+Beast%2C+8GB&categoria=todas" target="_blank" class="product-link">
         <figure class="product-info">
           <div class="product-info-img">
@@ -516,11 +654,13 @@ $usuarioLogado = isset($_SESSION['usuario']) ? $_SESSION['usuario'] : null;
             </div>
             <button href="#" class="btn btn-buy">comparar <i class="fas fa-arrow-right"></i></button>
           </div>
-          </div>
+          
         </figure>
       </a>
-    </li>
-    <li class="product-item">
+          </li>
+        </div>
+        <div class="product-card">
+          <li class="product-item">
       <a href="http://localhost:3000/search?q=&searchTerm=Mem%C3%B3ria+Kingston+Fury+Beast%2C+16GB&categoria=todas" target="_blank" class="product-link">
         <figure class="product-info">
           <div class="product-info-img">
@@ -555,11 +695,13 @@ $usuarioLogado = isset($_SESSION['usuario']) ? $_SESSION['usuario'] : null;
             </div>
             <button href="#" class="btn btn-buy">comparar <i class="fas fa-arrow-right"></i></button>
           </div>
-          </div>
+          
         </figure>
       </a>
-    </li>
-    <li class="product-item">
+          </li>
+        </div>
+        <div class="product-card">
+          <li class="product-item">
       <a href="http://localhost:3000/search?q=&searchTerm=SSD+1+TB+Kingston+NV2&categoria=todas" target="_blank" class="product-link">
         <figure class="product-info">
           <div class="product-info-img">
@@ -594,11 +736,12 @@ $usuarioLogado = isset($_SESSION['usuario']) ? $_SESSION['usuario'] : null;
             </div>
             <button href="#" class="btn btn-buy">comparar <i class="fas fa-arrow-right"></i></button>
           </div>
-          </div>
         </figure>
       </a>
-    </li>
-    <li class="product-item">
+          </li>
+        </div>
+        <div class="product-card">
+          <li class="product-item">
       <a href="http://localhost:3000/search?q=&searchTerm=SSD+Kingston+Nv2%2C+500GB&categoria=todas" target="_blank" class="product-link">
         <figure class="product-info">
           <div class="product-info-img">
@@ -633,14 +776,429 @@ $usuarioLogado = isset($_SESSION['usuario']) ? $_SESSION['usuario'] : null;
             </div>
             <button href="#" class="btn btn-buy">comparar <i class="fas fa-arrow-right"></i></button>
           </div>
+        </figure>
+      </a>
+          </li>
+        </div>
+        <div class="product-card">
+          <li class="product-item">
+      <a href="http://localhost:3000/search?q=&searchTerm=SSD+Kingston+Nv2%2C+500GB&categoria=todas" target="_blank" class="product-link">
+        <figure class="product-info">
+          <div class="product-info-img">
+            <img src="https://images.kabum.com.br/produtos/fotos/474946/memoria-xpg-spectrix-d35g-rgb-16gb-3200mhz-ddr4-cl16-preto-ax4u320016g16a-sbkd35g_1700162057_gg.jpg" alt="description image">
+          </div>
+          <figcaption class="product-info-description">
+            <h2 class="title">Memória RAM XPG Spectrix D35G</h2>
+            <p class="description">RGB, 16GB, 3200MHz, DDR4, CL16, Preto</p>
+            <ul class="star-ranking">
+              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+              </li>
+              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+              </li>
+              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+              </li>
+              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+              </li>
+              <li><img src="https://i.ibb.co/rGmv1GN/Meia-Estrela.png">
+              </li>
+              <li class="qtd-votes">
+                </span>(136)</span>
+              </li>
+            </ul>
+          </figcaption>
+          <div class="price-box">
+            <div class="price">
+              <div>
+                <del>R$352,93</del>
+                <ins class="d-block">Ver detalhes</ins>
+              </div>
+              <span class="price-info">Ver detalhes</span>
+            </div>
+            <button href="#" class="btn btn-buy">comparar <i class="fas fa-arrow-right"></i></button>
           </div>
         </figure>
       </a>
-    </li>
-  
+          </li>
+        </div>
+        <div class="product-card">
+          <li class="product-item">
+      <a href="http://localhost:3000/search?q=&searchTerm=SSD+Kingston+Nv2%2C+500GB&categoria=todas" target="_blank" class="product-link">
+        <figure class="product-info">
+          <div class="product-info-img">
+            <img src="https://images.kabum.com.br/produtos/fotos/508091/memoria-corsair-vengeance-rgb-rs-16gb-2x8gb-3600mhz-ddr4-cl18-preto-cmg16gx4m2d3600c18_1703789420_gg.jpg" alt="description image">
+          </div>
+          <figcaption class="product-info-description">
+            <h2 class="title">Memória RAM Corsair Vengeance RGB RS</h2>
+            <p class="description">16GB (2x8GB)3600MHz, DDR4, CL18, Preto</p>
+            <ul class="star-ranking">
+              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+              </li>
+              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+              </li>
+              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+              </li>
+              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+              </li>
+              <li><img src="https://i.ibb.co/rGmv1GN/Meia-Estrela.png">
+              </li>
+              <li class="qtd-votes">
+                </span>(17)</span>
+              </li>
+            </ul>
+          </figcaption>
+          <div class="price-box">
+            <div class="price">
+              <div>
+                <del>R$339,90</del>
+                <ins class="d-block">Ver detalhes</ins>
+              </div>
+              <span class="price-info">Ver detalhes</span>
+            </div>
+            <button href="#" class="btn btn-buy">comparar <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </figure>
+      </a>
+          </li>
+        </div>
+        <div class="product-card">
+          <li class="product-item">
+      <a href="http://localhost:3000/search?q=&searchTerm=SSD+Kingston+Nv2%2C+500GB&categoria=todas" target="_blank" class="product-link">
+        <figure class="product-info">
+          <div class="product-info-img">
+            <img src="https://images.kabum.com.br/produtos/fotos/272356/ssd-kingston-fury-renegade-1000gb-m-2-2280-pcie-nvme-leituras-7-300mb-s-gravacao-6-000mb-s-sfyrs-1000g_1637328670_gg.jpg" alt="description image">
+          </div>
+          <figcaption class="product-info-description">
+            <h2 class="title">SSD 1 TB Kingston Fury Renegade</h2>
+            <p class="description"> M.2 2280 PCIe, NVMe, Leitura: 7300MB/s e Gravação: 6000MB/s</p>
+            <ul class="star-ranking">
+              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+              </li>
+              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+              </li>
+              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+              </li>
+              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+              </li>
+              <li><img src="https://i.ibb.co/rGmv1GN/Meia-Estrela.png">
+              </li>
+              <li class="qtd-votes">
+                </span>(329)</span>
+              </li>
+            </ul>
+          </figcaption>
+          <div class="price-box">
+            <div class="price">
+              <div>
+                <del>R$1.058,81</del>
+                <ins class="d-block">Ver detalhes</ins>
+              </div>
+              <span class="price-info">Ver detalhes</span>
+            </div>
+            <button href="#" class="btn btn-buy">comparar <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </figure>
+      </a>
+          </li>
+        </div>
+      </div>
   </ul>
+  </section>
 
-  
+
+  <!-- terceir vitrine -->
+  <h2 class="vitrine">Processadores</h2>
+  <section class="products">
+    <button class="pre-btn"><img src="https://i.ibb.co/H4MPKtS/Seta-Esquerda.png" alt="Seta-Esquerda" border="0"></button>
+    <button class="nxt-btn"><img src="https://i.ibb.co/7pZKPP9/Seta-Direita.png" alt="Seta-Direita" border="0"></button>
+    <ul class="product-list">
+      <div class="product-container">
+        <div class="product-card">
+          <li class="product-item">
+      <a href="http://localhost:3000/search?q=&searchTerm=Mem%C3%B3ria+Kingston+Fury+Beast%2C+8GB&categoria=todas" target="_blank" class="product-link">
+        <figure class="product-info">
+          <div class="product-info-img">
+            <img src="https://images.kabum.com.br/produtos/fotos/520368/processador-amd-ryzen-5-5600gt-3-6-ghz-4-6ghz-max-turbo-cache-4mb-6-nucleos-12-threads-am4-100-100001488box_1708024586_gg.jpg" alt="description image" style="width: 70%;">
+          </div>
+          <figcaption class="product-info-description">
+            <h2 class="title">Processador AMD Ryzen 5 5600GT</h2>
+            <p class="description">3.6 GHz, (4.6GHz Max Turbo), Cachê 4MB, 6 Núcleos, 12 Threads, AM4</p>
+            <ul class="star-ranking">
+              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+              </li>
+              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+              </li>
+              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+              </li>
+              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+              </li>
+              <li><img src="https://i.ibb.co/rGmv1GN/Meia-Estrela.png">
+              </li>
+              <li class="qtd-votes">
+                </span>(116)</span>
+              </li>
+            </ul>
+          </figcaption>
+          <div class="price-box">
+            <div class="price">
+              <div>
+                <del>R$1.052,62</del>
+                <ins class="d-block">Ver detalhes</ins>
+              </div>
+              <span class="price-info">Ver detalhes</span>
+            </div>
+            <button href="#" class="btn btn-buy">comparar <i class="fas fa-arrow-right"></i></button>
+          </div>
+          
+        </figure>
+      </a>
+          </li>
+        </div>
+        <div class="product-card">
+          <li class="product-item">
+      <a href="http://localhost:3000/search?q=&searchTerm=Mem%C3%B3ria+Kingston+Fury+Beast%2C+16GB&categoria=todas" target="_blank" class="product-link">
+        <figure class="product-info">
+          <div class="product-info-img">
+            <img src="https://images.kabum.com.br/produtos/fotos/283718/processador-intel-core-i5-12400f-cache-xmb-xghz-xghz-max-turbo-lga-1700-bx8071512400f_1640094446_gg.jpg" alt="description image" style="width: 70%;">
+          </div>
+          <figcaption class="product-info-description">
+            <h2 class="title">Processador Intel Core i5-12400F</h2>
+            <p class="description">2.5GHz (4.4GHz Max Turbo), Cache 18MB, LGA 1700</p>
+            <ul class="star-ranking">
+              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+              </li>
+              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+              </li>
+              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+              </li>
+              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+              </li>
+              <li><img src="https://i.ibb.co/TwYYb93/star-1.png">
+              </li>
+              <li class="qtd-votes">
+                </span>(228)</span>
+              </li>
+            </ul>
+          </figcaption>
+          <div class="price-box">
+            <div class="price">
+              <div>
+                <del>R$1.177,41</del>
+                <ins class="d-block">Ver detalhes</ins>
+              </div>
+              <span class="price-info">Ver detalhes</span>
+            </div>
+            <button href="#" class="btn btn-buy">comparar <i class="fas fa-arrow-right"></i></button>
+          </div>
+          
+        </figure>
+      </a>
+          </li>
+        </div>
+        <div class="product-card">
+          <li class="product-item">
+      <a href="http://localhost:3000/search?q=&searchTerm=SSD+1+TB+Kingston+NV2&categoria=todas" target="_blank" class="product-link">
+        <figure class="product-info">
+          <div class="product-info-img">
+            <img src="https://images.kabum.com.br/produtos/fotos/102248/processador-amd-ryzen-3-3200g-cache-4mb-3-6ghz-4ghz-max-turbo-am4-yd3200c5fhbox_1607691191_gg.jpg" alt="description image" style="width: 80%;">
+          </div>
+          <figcaption class="product-info-description">
+            <h2 class="title">Processador AMD Ryzen 3 3200G</h2>
+            <p class="description">3.6GHz (4GHz Max Turbo), Cache 4MB, Quad Core, 4 Threads, AM4</p>
+            <ul class="star-ranking">
+              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+              </li>
+              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+              </li>
+              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+              </li>
+              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+              </li>
+              <li><img src="https://i.ibb.co/rGmv1GN/Meia-Estrela.png">
+              </li>
+              <li class="qtd-votes">
+                </span>(417)</span>
+              </li>
+            </ul>
+          </figcaption>
+          <div class="price-box">
+            <div class="price">
+              <div>
+                <del>R$519,99</del>
+                <ins class="d-block">Ver detalhes</ins>
+              </div>
+              <span class="price-info">Ver detalhes</span>
+            </div>
+            <button href="#" class="btn btn-buy">comparar <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </figure>
+      </a>
+          </li>
+        </div>
+        <div class="product-card">
+          <li class="product-item">
+      <a href="http://localhost:3000/search?q=&searchTerm=SSD+Kingston+Nv2%2C+500GB&categoria=todas" target="_blank" class="product-link">
+        <figure class="product-info">
+          <div class="product-info-img">
+            <img src="https://images.kabum.com.br/produtos/fotos/520367/processador-amd-ryzen-7-5700-3-7-ghz-4-6ghz-max-turbo-cache-4mb-8-nucleos-16-threads-am4-100-100000743box_1708024352_gg.jpg" alt="description image" style="width: 70%;">
+          </div>
+          <figcaption class="product-info-description">
+            <h2 class="title">Processador AMD Ryzen 7 5700</h2>
+            <p class="description">3.7 GHz (4.6GHz Max Turbo), Cachê 4MB, 8 Núcleos, 16 Threads, AM4</p>
+            <ul class="star-ranking">
+              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+              </li>
+              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+              </li>
+              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+              </li>
+              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+              </li>
+              <li><img src="https://i.ibb.co/TwYYb93/star-1.png">
+              </li>
+              <li class="qtd-votes">
+                </span>(18)</span>
+              </li>
+            </ul>
+          </figcaption>
+          <div class="price-box">
+            <div class="price">
+              <div>
+                <del>R$1.348,60</del>
+                <ins class="d-block">Ver detalhes</ins>
+              </div>
+              <span class="price-info">Ver detalhes</span>
+            </div>
+            <button href="#" class="btn btn-buy">comparar <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </figure>
+      </a>
+          </li>
+        </div>
+        <div class="product-card">
+          <li class="product-item">
+      <a href="http://localhost:3000/search?q=&searchTerm=SSD+Kingston+Nv2%2C+500GB&categoria=todas" target="_blank" class="product-link">
+        <figure class="product-info">
+          <div class="product-info-img">
+            <img src="https://images.kabum.com.br/produtos/fotos/181065/processador-intel-core-i3-10105-cache-6mb-3-7ghz-4-4ghz-max-turbo-lga-1200-bx8070110105_1660591733_gg.jpg" alt="description image" style="width: 70%;">
+          </div>
+          <figcaption class="product-info-description">
+            <h2 class="title">Processador Intel Core i3-10105</h2>
+            <p class="description">3.7GHz (4.4GHz Max Turbo), Cache 6MB, Quad Core, 8 Threads, LGA 1200</p>
+            <ul class="star-ranking">
+              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+              </li>
+              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+              </li>
+              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+              </li>
+              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+              </li>
+              <li><img src="https://i.ibb.co/TwYYb93/star-1.png">
+              </li>
+              <li class="qtd-votes">
+                </span>(54)</span>
+              </li>
+            </ul>
+          </figcaption>
+          <div class="price-box">
+            <div class="price">
+              <div>
+                <del>R$704,69</del>
+                <ins class="d-block">Ver detalhes</ins>
+              </div>
+              <span class="price-info">Ver detalhes</span>
+            </div>
+            <button href="#" class="btn btn-buy">comparar <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </figure>
+      </a>
+          </li>
+        </div>
+        <div class="product-card">
+          <li class="product-item">
+      <a href="http://localhost:3000/search?q=&searchTerm=SSD+Kingston+Nv2%2C+500GB&categoria=todas" target="_blank" class="product-link">
+        <figure class="product-info">
+          <div class="product-info-img">
+            <img src="https://images.kabum.com.br/produtos/fotos/426261/processador-amd-ryzen-9-7900x3d-5-6ghz-max-turbo-cache-140mb-am5-12-nucleos-video-integrado-100-100000909wof_1676552311_gg.jpg" alt="description image" style="width: 80%;">
+          </div>
+          <figcaption class="product-info-description">
+            <h2 class="title">Processador AMD Ryzen 9 7900X3D</h2>
+            <p class="description">5.6GHz Max Turbo, Cache 140MB, AM5, 12 Núcleos</p>
+            <ul class="star-ranking">
+              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+              </li>
+              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+              </li>
+              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+              </li>
+              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+              </li>
+              <li><img src="https://i.ibb.co/rGmv1GN/Meia-Estrela.png">
+              </li>
+              <li class="qtd-votes">
+                </span>(6)</span>
+              </li>
+            </ul>
+          </figcaption>
+          <div class="price-box">
+            <div class="price">
+              <div>
+                <del>R$4.181,44</del>
+                <ins class="d-block">Ver detalhes</ins>
+              </div>
+              <span class="price-info">Ver detalhes</span>
+            </div>
+            <button href="#" class="btn btn-buy">comparar <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </figure>
+      </a>
+          </li>
+        </div>
+        <div class="product-card">
+          <li class="product-item">
+      <a href="http://localhost:3000/search?q=&searchTerm=SSD+Kingston+Nv2%2C+500GB&categoria=todas" target="_blank" class="product-link">
+        <figure class="product-info">
+          <div class="product-info-img">
+            <img src="https://images.kabum.com.br/produtos/fotos/497573/processador-intel-core-i9-14900k-bx8071514900k_1697721913_gg.jpg" alt="description image" style="width: 70%;">
+          </div>
+          <figcaption class="product-info-description">
+            <h2 class="title">Processador Intel Core i9-14900K</h2>
+            <p class="description">14ª Geração, 6GHz Max Turbo, Cache 36MB, 24 Núcleos, 32 Threads, LGA1700</p>
+            <ul class="star-ranking">
+              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+              </li>
+              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+              </li>
+              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+              </li>
+              <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+              </li>
+              <li><img src="https://i.ibb.co/rGmv1GN/Meia-Estrela.png">
+              </li>
+              <li class="qtd-votes">
+                </span>(5)</span>
+              </li>
+            </ul>
+          </figcaption>
+          <div class="price-box">
+            <div class="price">
+              <div>
+                <del>R$4.300,00</del>
+                <ins class="d-block">Ver detalhes</ins>
+              </div>
+              <span class="price-info">Ver detalhes</span>
+            </div>
+            <button href="#" class="btn btn-buy">comparar <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </figure>
+      </a>
+          </li>
+        </div>
+      </div>
+  </ul>
+  </section>
+
+  <script src="SlideScript.js"></script>
   
 <script>
   document.getElementById('search-input').addEventListener('submit', function (event){
@@ -653,12 +1211,35 @@ $usuarioLogado = isset($_SESSION['usuario']) ? $_SESSION['usuario'] : null;
   
   <div style="margin: 50px 0; display: flex; align-items: center; justify-content: center; width: 100%">
   
-    <a style="display: block; text-align:  center; color: #555; text-decoration: none; margin-right: 15px; " href="" target="_blank"><i class="fas fa-home" style="color: #1da1f2; margin-right: 5px;"></i>comparar.com.br</a>
+    <a style="display: block; text-align:  center; color: #555; text-decoration: none; margin-right: 15px; " href="" target="_blank"><i class="fas fa-home" style="color: #1da1f2; margin-right: 5px;"></i>T.IBusca.com.br</a>
   </div>
-  <footer class="rodape">
-    <p>confira os melhores produtos de informática hoje mesmo nas melhores lojas</p>
-    <p> este foi desevolvido por <a href=""></a> nome  <br> &copy; todos os direitos reservados  </p>
-  </footer>
+  <footer>
+    <div class="footer-content">
+        <div class="footer-section about">
+            <h3>Sobre</h3>
+            <p>O T.I Busca é o seu destino definitivo para encontrar os melhores produtos online. De periféricos a computadores completos, nossa plataforma busca em uma ampla variedade de lojas para oferecer as melhores opções e preços. Economize tempo e dinheiro comparando ofertas e faça compras informadas conosco.</p>
+        </div>
+        <div class="footer-section links">
+            <h3>Links Úteis</h3>
+            <ul>
+                <li><a href="index.php">Página Inicial</a></li>
+                <li><a href="Sobre.html">Sobre</a></li>
+                <li><a href="https://criarmeulink.com.br/u/1723131389">Contato</a></li>
+            </ul>
+        </div>
+        <div class="footer-section contact">
+            <div class="contato">
+            <h3>Contato</h3>
+            <p><img style="margin-right: 3px; width: 2%;" src="https://img.icons8.com/ios-filled/100/FFFFFF/secured-letter--v1.png" alt="secured-letter--v1"/>tibusca4@gmail.com</p>
+            <p><img src="https://i.ibb.co/Xt6HzS5/icons8-instagram-150.png" alt="" style="width: 2.4%;"><a style="border: none; margin: 0;" href="https://www.instagram.com/tibusca.inc?igsh=MWh0cmR3M2FybWY3eQ==">@T.IBusca.inc</a></p>
+            <p><img style="margin-right: 3px; width: 2%;" src="https://i.ibb.co/wwjGPb2/icons8-whatsapp-100.png" alt="whatsapp--v1"/>+55 21 97468-1193</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2024 T.IBusca. Todos os direitos reservados.
+    </div>
+</footer>
   
 </body>
 </html>

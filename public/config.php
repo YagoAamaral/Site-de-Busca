@@ -1,6 +1,6 @@
 <?php
 
-$dbHost = 'localhost';
+$dbHost = 'Localhost';
 $dbUsername = 'root';
 $dbPassword = '';
 $dbName = 'site_de_busca';
