@@ -2,6 +2,18 @@
 session_start();
 include 'config.php'; // Inclua seu arquivo de conexão com o banco de dados
 
+//exibição de erros
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+
+//Verificar se a erro na conexão
+include 'config.php'; 
+if (!$conexao) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['usuario'];
     $password = $_POST['senha'];
@@ -60,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <input type="text" name="usuario" placeholder="Usuário">
                     </div>
                     <div class="textfield">
-                        <label for="senha">Sanha</label>
+                        <label for="senha">Senha</label>
                         <input type="password" name="senha" placeholder="Senha">
                     </div>
                     <input class="btnLogin" type="submit" name="submit" id="submit" value="Entrar">

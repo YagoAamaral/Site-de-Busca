@@ -9,6 +9,10 @@ background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(249,129,1,0.3981
 
 }
 
+body * {
+    box-sizing: border-box;
+}
+
 .BordaCima{
     background: linear-gradient(180deg, rgba(249,129,1,1) 0%, rgba(249,129,1,0.7511379551820728) 100%);
     
@@ -242,4 +246,38 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 950px){
+    .card-login{
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .main-login{
+        flex-direction: column;
+    }
+    .LadoEsquerdo > h1{
+        display: none;
+    }
+    .LadoEsquerdo{
+        width: 100%;
+        height: auto;
+    }
+    .LadoDireito{
+        width: 100%;
+        height: auto;
+    }
+    .LadoEsquerdo-Imagem{
+        width: 50vw;
+    }
+    .Cartão-Login{
+        width: 90%;
+    }
+
+    .contato{
+        flex-direction: column;
+    }
 }

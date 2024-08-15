@@ -190,3 +190,115 @@ footer {
     font-size: 0.8em;
 }
 
+@media screen and (max-width: 1025px){
+    html{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+
+    .cabeçalho{
+        height: 120px;
+        display: flex;
+    }
+
+    #nomeSite{
+        position: relative;
+        right: 100%;
+        bottom: 100%;
+    }
+
+    #Nome{
+        font-size: 10px;
+        position: relative;
+        left: 100%;
+        bottom: 40%;
+        margin: none;
+    }
+
+    #Logo{
+        position: relative;
+        bottom: 30px;
+        left: 100%;
+        margin-right: 5%;
+        width: 35px;
+        height: 35px;
+    }
+
+    .search-container{
+        position: relative;
+        right: 7%;
+        top: 20px;
+        width: 100%;
+    }
+
+    #Login_CEP{
+        position: relative;
+        bottom: 20px;
+        right: 21%;
+        width: 10px
+    }
+
+    #Login{
+        width: 80px;
+        height: 30px;
+
+        position: relative;
+        bottom: 10px;
+    }
+
+    #imgLogin{
+        width: 20px;
+        height: 20px;
+    }
+
+    #searchTerm{
+        width: 430px;
+    }
+
+    .Texto-pequisa{
+        display: none;
+    }
+
+    .Slogan{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        left: 20%;
+        width: 80%;
+    }
+
+    #Img-Slogan{
+        margin: none;
+    }
+
+    #Texto-Slogan{
+        font-size: 23px;
+        margin-bottom: 55px;
+        position: relative;
+        top: 30px
+      }
+
+      .carousel-container{
+        width: 100%;
+        height: 10px
+      }
+
+      .container-lojas{
+        width: 430px;
+
+        position: relative;
+        left: 1px;
+        bottom: 50px;
+
+        margin: 1px;
+      }
+
+      .vitrine{
+        width: 50%;
+        height: 50%;
+      }
+
+}

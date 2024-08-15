@@ -62,7 +62,7 @@ $usuarioLogado = isset($_SESSION['usuario']) ? $_SESSION['usuario'] : null;
 </head>
 <body>
     
-    <header>
+    <header class="cabeçalho">
         <div id="nomeSite_btnMenu">
             
             <div id="nomeSite">

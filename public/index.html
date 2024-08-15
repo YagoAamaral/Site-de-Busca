@@ -16,12 +16,12 @@
 </head>
 <body>
     
-    <header>
+    <header class="cabeçalho">
         <div id="nomeSite_btnMenu">
             
             <div id="nomeSite">
                 <img id="Logo" src="https://i.ibb.co/4Js9pFg/Logo-Branca.png" alt="Logo-Branca" border="0">
-                <h1>T.I Busca</h1>
+                <h1 id="Nome">T.I Busca</h1>
             </div>
         </div>
         <div class="search-container">
@@ -29,8 +29,8 @@
 
              
 
-              <label for="searchTerm">Termo de pesquisa:</label>
-              <input type="text" id="searchTerm" name="searchTerm" list="sugestões" required>
+              <label class="Texto-pequisa" for="searchTerm">Termo de pesquisa:</label>
+              <input type="text" placeholder="Digite aqui" id="searchTerm" name="searchTerm" list="sugestões" required>
               <datalist id="sugestões">
                 
                 <option value="Memória ram"></option>
@@ -121,7 +121,12 @@
         border: 2px;
     }
     
-    
+    @media screen and (max-width: 1025px){
+      .carousel-container{
+       display: none;
+        
+      }
+    }
     
 </style>
 
@@ -196,6 +201,12 @@
         color: #F98101;
         opacity: 0;
         animation: moveText 2s linear infinite;
+    }
+
+    @media screen and (max-width: 1025px){
+      .discount-text{
+        font-size: 11px
+      }
     }
 
     /* Animação para mover o texto */
