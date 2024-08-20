@@ -20,7 +20,7 @@ const categorias = ['monitor', 'perifericos', 'computador','memoriaram'];
 categorias.forEach(categoria => {
     app.get(`/categoria/${categoria}`, async (req, res) => {
         const browser = await puppeteer.launch({
-            headless: true,
+            headless: 'shell',
             args: [
                 '--no-sandbox',
                 '--disable-setuid-sandbox',
@@ -69,7 +69,7 @@ categorias.forEach(categoria => {
 
         const outputDir = path.join(__dirname, 'output');
         if (!fs.existsSync(outputDir)) {
-            fs.mkdirSync(outputDir); // determinar o caminho 
+            fs.mkdirSync(outputDir); // determinar o caminho
         }
 //criar um html
         const htmlContent = `
@@ -79,17 +79,17 @@ categorias.forEach(categoria => {
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>${categoria.charAt(0).toUpperCase() + categoria.slice(1)}</title>
-            <link rel="stylesheet" href="/estilos.css"> 
+            <link rel="stylesheet" href="/estilos.css">
         </head>
         <body>
             <h1>${categoria.charAt(0).toUpperCase() + categoria.slice(1)}</h1>
-            
+
             <div id="produtos">
                 ${products.map(product => `
                 <div class="produto" data-name="${product.nome}" data-image="${product.imageSrc}" data-price="${product.preçotexto}" data-merchant="${product.barato}" data-installment="${product.parcelamento}">
                     <h2>${product.nome}</h2>
                     <img src="${product.imageSrc}" alt="${product.nome}" class="product-image">
-                   
+
                         <p>Ranking: ${product.rank}</p>
                         <p>Preço: R$ ${product.preçotexto}</p>
                         <p>Melhor Vendedor: ${product.barato || 'Não disponível'}</p>
@@ -102,7 +102,7 @@ categorias.forEach(categoria => {
     <p> este site foi desevolvido por <h1><a href="http://localhost:3000/">T.I Buscar</a></h1>   <br> &copy; todos os direitos reservados <br>
     Este site tem apenas como objetivo listar os melhores produtos para a sua compra </p>
   </footer>
-          
+
         </body>
         </html>
         `;
@@ -187,8 +187,8 @@ app.get('/search', async (req, res) => {
     </head>
     <body>
         <h1>Resultados da Busca '${searchTerm}'</h1>
-        
-        
+
+
         <div id="produtos">
             ${products.map(product => `
             <div class="produto" data-name="${product.nome}" data-image="${product.imageSrc}" data-price="${product.preçotexto}" data-merchant="${product.barato}" data-installment="${product.parcelamento}">
@@ -204,7 +204,7 @@ app.get('/search', async (req, res) => {
         </div>
          <footer class="rodape">
     <p>confira os melhores produtos de informática hoje mesmo nas melhores lojas</p>
-    <p> este site foi desevolvido por <h1><a href="http://localhost:3000/">T.I Busca</a></h1>   <br> &copy; todos os direitos reservados <br> 
+    <p> este site foi desevolvido por <h1><a href="http://localhost:3000/">T.I Busca</a></h1>   <br> &copy; todos os direitos reservados <br>
     Este site tem apenas como objetivo listar os melhores produtos para a sua compra </p>
   </footer>
     </body>
@@ -219,7 +219,7 @@ app.get('/search', async (req, res) => {
     res.sendFile(filePath);
 });
 
-const port = 3000;
+const port = 80;
 app.listen(port, () => {
-    console.log(` http://localhost:${port}`);
+    console.log(` http://167.88.33.177/:${port}`);
 });
