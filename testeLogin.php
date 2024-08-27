@@ -1,4 +1,5 @@
 <?php
+    session_start();
 
     //print_r($_REQUEST);
     if(isset($_POST['submit']) && !empty($_POST['usuario']) && !empty($_POST['senha']))
@@ -21,11 +22,15 @@
 
         if(mysqli_num_rows($result) < 1)
         {
+            unset($_SESSION['id']);
+            unset($_SESSION['senha']);
             header('Location: login.php');
         }
         else
         {
-            header('Location: SiteDeBusca.html');
+            $_SESSION['id'] = $usuario;
+            $_SESSION['senha'] = $senha;
+            header('Location: SiteDeBusca.php');
         }
     }
     else
